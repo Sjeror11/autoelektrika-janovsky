@@ -58,22 +58,38 @@ const addAiMessage = (message, role = 'assistant') => {
     aiMessages.scrollTo({ top: aiMessages.scrollHeight, behavior: 'smooth' });
 };
 
-const cannedResponses = [
-    'Podle popisu doporučuji začít měřením napětí na baterii a alternátoru. Dokážete zjistit hodnoty při běžícím motoru?',
-    'Díky za informace. Pokud startér pouze cvaká, je možné, že relé nebo solenoid nedodává plný proud. Přijedeme s přenosným testerem.',
-    'Kontrolka dobíjení může signalizovat opotřebené uhlíky alternátoru. Doporučuji neodkládat opravu, abychom předešli vybití baterie.'
-];
-
-aiDemoForm?.addEventListener('submit', event => {
+// Real AI Chat s Gemini API
+aiDemoForm?.addEventListener('submit', async event => {
     event.preventDefault();
     const value = aiInput?.value.trim();
     if (!value) return;
+
+    // Zobraz user message
     addAiMessage(value, 'user');
     aiInput.value = '';
-    setTimeout(() => {
-        const response = cannedResponses[Math.floor(Math.random() * cannedResponses.length)];
+
+    // Zobraz loading indicator
+    const loadingMsg = document.createElement('div');
+    loadingMsg.className = 'ai__message ai__message--assistant ai__message--loading';
+    loadingMsg.innerHTML = '<strong>Asistent:</strong><p>Píšu odpověď...</p>';
+    aiMessages.append(loadingMsg);
+    aiMessages.scrollTo({ top: aiMessages.scrollHeight, behavior: 'smooth' });
+
+    try {
+        // Zavolej Gemini API
+        const response = await window.GeminiChat.send(value);
+
+        // Odstraň loading
+        loadingMsg.remove();
+
+        // Zobraz AI odpověď
         addAiMessage(response, 'assistant');
-    }, 700);
+
+    } catch (error) {
+        console.error('AI Chat Error:', error);
+        loadingMsg.remove();
+        addAiMessage('⚠️ Omlouváme se, došlo k chybě. Kontaktujte nás prosím na: 777 100 478', 'assistant');
+    }
 });
 
 // Contact form handling - create mailto link

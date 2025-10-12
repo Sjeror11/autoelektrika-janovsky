@@ -19,3 +19,4 @@ Thumbs.db
 # Environment variables (pokud budeš mít API klíče)
 .env
 .env.local
+*.pid

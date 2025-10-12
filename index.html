@@ -155,28 +155,28 @@
         <section class="section" id="ai-assistant">
             <div class="container ai">
                 <div class="ai__content">
-                    <h2>Virtuální diagnostický asistent</h2>
-                    <p>Plánujeme integraci AI asistenta, který vám pomůže s prvotní identifikací závady, odhadne rozsah opravy a provede vás základními kontrolami. API klíče budou vždy uloženy bezpečně mimo veřejný kód, aby zůstala data i přístup chráněna.</p>
+                    <h2>🤖 AI Diagnostický Asistent</h2>
+                    <p>Náš AI asistent vám pomůže s prvotní identifikací závady, odhadne možné příčiny a doporučí další kroky. Powered by Google Gemini AI pro přesné a užitečné odpovědi.</p>
                     <div class="ai__actions">
-                        <button class="button button--primary" id="openAiDemo">Vyzkoušet demo</button>
-                        <a class="button button--ghost" href="#contact">Domluvit reálnou diagnostiku</a>
+                        <button class="button button--primary" id="openAiDemo">💬 Spustit AI chat</button>
+                        <a class="button button--ghost" href="#contact">📞 Zavolat technika</a>
                     </div>
-                    <p class="ai__disclaimer">Demo asistenta je zatím pouze ilustrační. Po spuštění ostré verze poběží komunikace přes zabezpečený backend bez ukládání citlivých údajů na GitHubu.</p>
+                    <p class="ai__disclaimer">⚡ AI asistent je pro informativní účely. Pro přesnou diagnostiku doporučujeme kontakt s technikem.</p>
                 </div>
                 <div class="ai__preview" id="aiDemoWindow" aria-hidden="true">
                     <div class="ai__header">
-                        <h3>AI demo chat</h3>
+                        <h3>🤖 AI Diagnostický Asistent</h3>
                         <button id="closeAiDemo" aria-label="Zavřít">×</button>
                     </div>
                     <div class="ai__messages">
                         <div class="ai__message ai__message--assistant">
-                            <strong>Asistent:</strong>
-                            <p>Dobrý den, jsem diagnostický asistent Autoelektrika Janovský. Popište prosím, co se s vozem děje.</p>
+                            <strong>AI Asistent:</strong>
+                            <p>Dobrý den! Jsem AI diagnostický asistent Autoelektrika Janovský. Popište mi prosím, jaký problém máte s vozem a pokusím se vám poradit. 🚗⚡</p>
                         </div>
                     </div>
                     <form class="ai__form" id="aiDemoForm">
-                        <input type="text" id="aiInput" placeholder="Např. Startér jen cvakne a motor nechytne..." required>
-                        <button type="submit">Odeslat</button>
+                        <input type="text" id="aiInput" placeholder="Např. Auto mi nechytá, startér jen cvaká..." required>
+                        <button type="submit">💬 Poslat</button>
                     </form>
                 </div>
             </div>
@@ -220,6 +220,7 @@
         </div>
     </footer>
 
+    <script src="js/gemini-chat.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

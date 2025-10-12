@@ -457,6 +457,16 @@ ul, ol {
     border-color: rgba(255, 138, 61, 0.3);
 }
 
+.ai__message--loading {
+    opacity: 0.7;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
 .ai__form {
     display: grid;
     grid-template-columns: 1fr auto;
