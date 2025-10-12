@@ -218,6 +218,30 @@ ul, ol {
     color: var(--text-muted);
 }
 
+/* Hero AI Chat - rozbaluje se v hero sekci */
+.hero__ai-chat {
+    position: absolute;
+    bottom: -400px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(600px, calc(100% - 2rem));
+    background: var(--bg-muted);
+    border-radius: 18px;
+    border: 1px solid rgba(78, 169, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(6, 11, 19, 0.4);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    max-height: 540px;
+    z-index: 1000;
+    transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero__ai-chat.active {
+    display: flex;
+    bottom: 120px;
+}
+
 .hero__menu-toggle {
     position: absolute;
     top: 1.5rem;
