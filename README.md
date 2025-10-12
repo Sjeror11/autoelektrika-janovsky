@@ -62,7 +62,7 @@ Otevři v prohlížeči: `http://localhost:8080`
 - [x] 4 služby s detailním popisem
 - [x] 4-stupňový proces opravy
 - [x] AI diagnostický asistent (demo)
-- [x] Kontaktní formulář (FormSubmit.co)
+- [x] Kontaktní formulář (mailto: link)
 - [x] Mobile hamburger menu
 - [x] Smooth scroll navigace
 - [x] SEO optimalizace (meta tagy)
@@ -80,7 +80,7 @@ Otevři v prohlížeči: `http://localhost:8080`
 
 **Lukáš Janovský**
 📞 [+420 777 100 478](tel:+420777100478)
-✉️ [servis@autoelektrika-janovsky.cz](mailto:servis@autoelektrika-janovsky.cz)
+✉️ [lakyjanovsky@seznam.cz](mailto:lakyjanovsky@seznam.cz)
 
 **Provozní doba:**
 Po–Pá 8:00–18:00
@@ -99,7 +99,7 @@ SOS zásahy dle domluvy
 ## 🔒 Bezpečnost
 
 - Žádné API klíče v kódu (použít `.env` při integraci)
-- FormSubmit.co pro bezpečné odesílání emailů
+- Mailto: link pro jednoduché kontaktování
 - HTTPS ready (GitHub Pages auto SSL)
 
 ## 📝 License
