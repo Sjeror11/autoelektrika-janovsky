@@ -76,43 +76,59 @@ aiDemoForm?.addEventListener('submit', event => {
     }, 700);
 });
 
-// Check for success parameter in URL (after FormSubmit redirect)
-if (window.location.search.includes('success=true')) {
-    alert('✅ Děkujeme za zprávu! Ozveme se vám co nejdříve (do 2 hodin).');
-    // Remove success parameter from URL
-    window.history.replaceState({}, document.title, window.location.pathname);
-}
-
-// Form validation styling (optional enhancement)
+// Contact form handling - create mailto link
 contactForm?.addEventListener('submit', event => {
+    event.preventDefault();
+
     const name = document.getElementById('name');
     const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
     const message = document.getElementById('message');
 
-    // Basic validation feedback
+    // Validation
     if (!name?.value.trim()) {
-        event.preventDefault();
         alert('⚠️ Prosím vyplňte vaše jméno');
         name?.focus();
         return;
     }
 
     if (!email?.value.trim() || !email.value.includes('@')) {
-        event.preventDefault();
         alert('⚠️ Prosím zadejte platný e-mail');
         email?.focus();
         return;
     }
 
+    if (!phone?.value.trim()) {
+        alert('⚠️ Prosím zadejte telefon');
+        phone?.focus();
+        return;
+    }
+
     if (!message?.value.trim() || message.value.length < 10) {
-        event.preventDefault();
         alert('⚠️ Prosím popište problém detailněji (min. 10 znaků)');
         message?.focus();
         return;
     }
 
-    // If validation passes, form will submit to FormSubmit.co
-    // User will be redirected back with ?success=true
+    // Create mailto link
+    const subject = encodeURIComponent('Poptávka z webu - Autoelektrika Janovský');
+    const body = encodeURIComponent(
+        `Jméno: ${name.value}\n` +
+        `Email: ${email.value}\n` +
+        `Telefon: ${phone.value}\n\n` +
+        `Zpráva:\n${message.value}`
+    );
+
+    const mailtoLink = `mailto:lakyjanovsky@seznam.cz?subject=${subject}&body=${body}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Reset form after short delay
+    setTimeout(() => {
+        contactForm.reset();
+        alert('✅ Email byl připraven ve vašem emailovém klientu. Stačí ho odeslat.');
+    }, 500);
 });
 
 if (currentYear) {
