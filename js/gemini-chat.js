@@ -3,7 +3,7 @@
 
 // Gemini API konfigurace
 const GEMINI_API_KEY = 'AIzaSyD6XvCql5zkTWRzthUX9XTGnon7f206Hn4';
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent';
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
 // System prompt pro autoelektrika
 const SYSTEM_PROMPT = `Jsi virtuální diagnostický asistent pro Autoelektriku Janovský. Tvůj úkol je pomoci zákazníkům s prvotní diagnostikou problémů s elektroinstalací vozidla a poskytnout užitečné rady.
