@@ -1,116 +1,73 @@
-# 🚗 Autoelektrika Janovský
+# Autoelektrika Janovský
 
-Profesionální webové stránky pro autoelektriku Lukáše Janovského.
+Produkční jednostránkový web autoelektrikářských služeb Lukáše Janovského.
 
-## 🎯 O Projektu
+- Web: <https://autoelektrika-janovsky.cz>
+- Hosting frontendu: GitHub Pages
+- AI diagnostický asistent: Vercel backend a Gemini API
+- Produkční větev: `main`
 
-Moderní, responzivní web pro autoelektriku specializující se na:
-- 🔧 Diagnostiku a opravy elektroinstalací vozidel
-- ⚡ Opravy startérů a alternátorů
-- 📦 Montáže příslušenství (tažná zařízení, alarmy, audio)
-- 🚨 SOS mobilní výjezdy
+## Funkce
 
-## 🌐 Live Demo
+- responzivní prezentace služeb;
+- přímý telefonní a e-mailový kontakt;
+- kontaktní formulář připravující e-mail pomocí `mailto:`;
+- mobilní navigace;
+- skutečný AI diagnostický asistent s navazující konverzací;
+- SEO a Open Graph metadata;
+- vlastní doména s HTTPS.
 
-**URL**: [https://sjeror11.github.io/autoelektrika-janovsky/](https://sjeror11.github.io/autoelektrika-janovsky/)
-**Doména**: [autoelektrika-janovsky.cz](https://autoelektrika-janovsky.cz) (v přípravě)
+## Struktura
 
-## 🛠️ Technologie
-
-- **HTML5** - Sémantické značkování
-- **CSS3** - Custom properties, Grid, Flexbox, animace
-- **JavaScript (Vanilla)** - Žádné závislosti, čistý ES6+
-- **Design** - Dark theme s moderním UI/UX
-- **Responsive** - Mobile-first přístup
-
-## 📂 Struktura Projektu
-
-```
-autoelektrika-janovsky/
-├── index.html          # Hlavní HTML soubor
-├── css/
-│   └── style.css       # Všechny styly (CSS variables)
-├── js/
-│   └── main.js         # JavaScript logika
-├── images/             # Obrázky (favicon, fotky služeb)
-├── README.md           # Tato dokumentace
-└── .gitignore          # Git ignore pravidla
+```text
+├── CNAME
+├── index.html
+├── css/style.css
+├── images/
+├── js/main.js
+└── js/gemini-chat.js
 ```
 
-## 🚀 Spuštění Lokálně
-
-### Jednoduchý HTTP server:
+## Lokální spuštění
 
 ```bash
-# Python 3
 python3 -m http.server 8080
-
-# Node.js (npx)
-npx http-server -p 8080
-
-# PHP
-php -S localhost:8080
 ```
 
-Otevři v prohlížeči: `http://localhost:8080`
+Potom otevřít <http://localhost:8080>.
 
-## ✨ Funkce
+Při lokálním spuštění očekává AI frontend backend na
+`http://localhost:3000`. Produkční web volá
+`https://autoelektrika-backend.vercel.app`.
 
-### ✅ Hotové:
-- [x] Responzivní design (desktop, tablet, mobile)
-- [x] Hero sekce s kontaktními informacemi
-- [x] 4 služby s detailním popisem
-- [x] 4-stupňový proces opravy
-- [x] AI diagnostický asistent (demo)
-- [x] Kontaktní formulář (mailto: link)
-- [x] Mobile hamburger menu
-- [x] Smooth scroll navigace
-- [x] SEO optimalizace (meta tagy)
+## Nasazení
 
-### 🔜 Plánované:
-- [ ] Real AI asistent (OpenAI/Claude API)
-- [ ] Backend pro ukládání kontaktů
-- [ ] Galerie realizovaných oprav
-- [ ] Blog/Novinky sekce
-- [ ] Recenze zákazníků
-- [ ] Online booking systém
-- [ ] Multi-language support (EN/DE)
+GitHub Pages publikuje obsah větve `main` z kořene repozitáře. Soubor `CNAME`
+musí vždy zůstat v kořeni a obsahovat:
 
-## 📞 Kontakt
+```text
+autoelektrika-janovsky.cz
+```
 
-**Lukáš Janovský**
-📞 [+420 777 100 478](tel:+420777100478)
-✉️ [lakyjanovsky@seznam.cz](mailto:lakyjanovsky@seznam.cz)
+Po každém nasazení se kontroluje hlavní doména, `www`, kontakty, mobilní vzhled
+a jeden skutečný AI dotaz.
 
-**Provozní doba:**
-Po–Pá 8:00–18:00
-SOS zásahy dle domluvy
+## Provozní dokumentace
 
-## 📊 SEO & Performance
+Podrobná dokumentace, obnova po výpadku a bezpečnostní postupy jsou uložené
+odděleně v privátním repozitáři `Sjeror11/autoelektrika-backend`. Lokální kopie
+je v `/home/laky/autoelektrika-backend/docs`.
 
-- ✅ Semantic HTML5
-- ✅ Meta description & keywords
-- ✅ Open Graph tags (připraveno)
-- ✅ Mobile-friendly (100% responsive)
-- ✅ Fast loading (vanilla JS, žádné frameworky)
-- ⏳ Google Analytics (v přípravě)
-- ⏳ Sitemap.xml (v přípravě)
+## Bezpečnost
 
-## 🔒 Bezpečnost
+V tomto repozitáři nesmí být žádný Gemini API klíč. Produkční klíč je uložený
+pouze v proměnných prostředí projektu Vercel. Starý klíč, který se v minulosti
+objevil v historii repozitáře, se nesmí znovu použít.
 
-- Žádné API klíče v kódu (použít `.env` při integraci)
-- Mailto: link pro jednoduché kontaktování
-- HTTPS ready (GitHub Pages auto SSL)
+## Kontakt
 
-## 📝 License
+- Lukáš Janovský
+- Telefon: [777 100 478](tel:+420777100478)
+- E-mail: [lakyjanovsky@seznam.cz](mailto:lakyjanovsky@seznam.cz)
 
-© 2025 Autoelektrika Janovský. Všechna práva vyhrazena.
-
-## 🤝 Kontribuce
-
-Tento projekt je privátní. Pro dotazy kontaktujte majitele.
-
----
-
-**Vytvořeno s ❤️ pro Lukáše Janovského**
-**Projekt vytvořen**: 12. října 2025
+© Autoelektrika Janovský. Všechna práva vyhrazena.
