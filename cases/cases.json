@@ -1,0 +1,91 @@
+{
+  "project": "Autoelektrika Janovský – databáze oprav",
+  "updated": "2026-08-18",
+  "statuses": [
+    "VYŘEŠENO",
+    "ROZPRACOVÁNO",
+    "NEVYŘEŠENO",
+    "UKONČENO – EKONOMICKY NEOPRAVENO"
+  ],
+  "cases": [
+    {
+      "id": "opel-meriva-b-can-abs",
+      "make": "Opel",
+      "model": "Meriva B",
+      "year": 2012,
+      "engine": "1.4 Turbo benzín",
+      "symptoms": ["výpadek posilovače", "mnoho kontrolek", "kolaps CAN", "omezená diagnostická komunikace"],
+      "systems": ["CAN", "ABS", "EPS"],
+      "cause": "Vadná ABS jednotka narušující CAN komunikaci; riziko zatékání v prostoru ABS.",
+      "repair": "Oprava/výměna ABS, kontrola CAN, následné naučení klikového systému a spojkového pedálu přes správně zvolenou variantu ECU v Launch.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/opel-meriva-b-can-abs.html"
+    },
+    {
+      "id": "honda-crv-iii-klimatizace-rele",
+      "make": "Honda",
+      "model": "CR-V III",
+      "engine": "2.2 i-CTDi",
+      "symptoms": ["klimatizace nechladí", "spojka kompresoru nespíná"],
+      "systems": ["klimatizace"],
+      "cause": "Vadné relé spojky kompresoru.",
+      "repair": "Výměna relé, vymazání DTC a nový cyklus zapalování.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/honda-crv-iii-klimatizace-rele.html"
+    },
+    {
+      "id": "skoda-superb-2013-klimatizace-kompresor",
+      "make": "Škoda",
+      "model": "Superb",
+      "year": 2013,
+      "engine": "2.0 TDI",
+      "symptoms": ["klimatizace nechladí", "tlak se nezvyšuje"],
+      "systems": ["klimatizace"],
+      "cause": "Vadný kompresor, zaseknutý regulační ventil zdvihu/výkonu kompresoru.",
+      "repair": "Výměna celého kompresoru; u konstrukce bez magnetické spojky nebyla zvolena pouze výměna regulačního ventilu.",
+      "status": "VYŘEŠENO"
+    },
+    {
+      "id": "kia-14-gdi-p0087",
+      "make": "Kia",
+      "model": "1.4 GDI",
+      "symptoms": ["P0087", "pokles tlaku paliva při zatížení", "nouzový režim"],
+      "systems": ["vysokotlaké palivo"],
+      "cause": "Vadný ventil řízení tlaku na vysokotlakém čerpadle.",
+      "repair": "Výměna regulačního ventilu tlaku na čerpadle.",
+      "status": "VYŘEŠENO"
+    },
+    {
+      "id": "skoda-octavia-2005-imobilizer-pristrojovka",
+      "make": "Škoda",
+      "model": "Octavia",
+      "year": 2005,
+      "symptoms": ["aktivovaný imobilizér", "problém se čtením čipu klíče"],
+      "systems": ["imobilizér", "přístrojová deska"],
+      "cause": "Vadný spoj v přístrojové desce v napájení čtecího kroužku transpondéru.",
+      "repair": "Oprava spoje v přístrojové desce.",
+      "status": "VYŘEŠENO"
+    },
+    {
+      "id": "dacia-benzin-podpalené-ventily",
+      "make": "Dacia",
+      "model": "benzínový motor",
+      "symptoms": ["nízká komprese", "problémy s během motoru"],
+      "systems": ["motor", "hlava válců", "rozvody"],
+      "cause": "Vadná hlava motoru a podpálené ventily.",
+      "repair": "Oprava sedel, výměna ventilů, přebroušení hlavy a nové rozvody.",
+      "status": "VYŘEŠENO"
+    },
+    {
+      "id": "ford-smax-cmax-20tdci-dpf",
+      "make": "Ford",
+      "model": "S-MAX/C-MAX",
+      "engine": "2.0 TDCi",
+      "symptoms": ["P246B", "P2463", "P244C", "regenerace DPF se nedokončí"],
+      "systems": ["DPF", "výfuk"],
+      "cause": "Případ nebyl technicky dokončen; další oprava by převýšila ekonomickou hodnotu vozidla.",
+      "repair": "Vozidlo předáno k likvidaci.",
+      "status": "UKONČENO – EKONOMICKY NEOPRAVENO"
+    }
+  ]
+}
