@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opel Meriva B 1.4T – kolaps CAN, ABS a posilovače | Autoelektrika Janovský</title>
+  <meta name="description" content="Skutečný případ Opel Meriva B 1.4 Turbo: výpadek posilovače, blikající přístrojová deska, kolaps CAN a vadná ABS jednotka. Diagnostika osciloskopem, odpor CAN, bypass ABS a finální oprava." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://autoelektrika-janovsky.cz/cases/opel-meriva-b-can-abs.html" />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .case{max-width:920px;margin:0 auto;padding:48px 20px}.case h1{line-height:1.15}.summary{padding:18px;border-radius:14px;background:rgba(0,0,0,.04)}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}.fact{padding:14px;border:1px solid rgba(0,0,0,.12);border-radius:12px}.status{display:inline-block;padding:5px 10px;border-radius:999px;background:#e9f8ee;font-weight:700}.warn{padding:16px;border-left:4px solid #b67800;background:#fff8e7}.case li{margin:.45rem 0}.measure{font-family:monospace;background:rgba(0,0,0,.04);padding:.15rem .35rem;border-radius:4px}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"Opel Meriva B 1.4T – kolaps CAN, ABS a posilovače",
+    "description":"Diagnostický případ výpadku CAN komunikace způsobeného vadnou ABS jednotkou u Opel Meriva B.",
+    "author":{"@type":"Organization","name":"Autoelektrika Janovský"},
+    "publisher":{"@type":"Organization","name":"Autoelektrika Janovský"},
+    "mainEntityOfPage":"https://autoelektrika-janovsky.cz/cases/opel-meriva-b-can-abs.html"
+  }
+  </script>
+</head>
+<body>
+<main class="case">
+  <p><a href="./">← Případy z dílny</a></p>
+  <span class="status">VYŘEŠENO</span>
+  <h1>Opel Meriva B 1.4T – kolaps CAN, ABS a výpadek posilovače</h1>
+
+  <div class="facts">
+    <div class="fact"><strong>Model</strong><br>Opel Meriva B</div>
+    <div class="fact"><strong>Motor</strong><br>1.4 Turbo benzín</div>
+    <div class="fact"><strong>Rok</strong><br>2012</div>
+    <div class="fact"><strong>Oblast</strong><br>CAN / ABS / EPS</div>
+  </div>
+
+  <div class="summary">
+    <strong>Výsledek:</strong> hlavní příčinou byla vadná ABS jednotka, která po probuzení sítě narušovala komunikaci CAN. Po opravě/výměně ABS systém znovu fungoval. Následné chyby adaptace klikového hřídele a spojkového pedálu vznikly po dlouhém odpojení baterie a podařilo se je naučit přes správně zvolenou variantu ECU v diagnostice Launch.
+  </div>
+
+  <h2>Příznaky</h2>
+  <ul>
+    <li>výpadek elektrického posilovače řízení,</li>
+    <li>mnoho současně rozsvícených kontrolek – „vánoční stromek“,</li>
+    <li>nestabilní komunikace mezi řídicími jednotkami,</li>
+    <li>diagnostika se do části systému vůbec nedostala,</li>
+    <li>problém se objevil po probuzení sítě po zapnutí klíčku.</li>
+  </ul>
+
+  <h2>Měření CAN</h2>
+  <p>Při vypnutém zapalování bylo mezi CAN-H a CAN-L naměřeno <span class="measure">62,1 Ω</span>. To odpovídá dvěma zakončovacím odporům 120 Ω zapojeným paralelně. Samotná terminace tedy nevypadala jako přerušená.</p>
+  <p>Po zapnutí klíčku odpor měřený multimetrem „létal“ ve stovkách ohmů. Tento údaj se později ukázal jako diagnosticky nepoužitelný, protože odpor nelze spolehlivě měřit na aktivní datové sběrnici.</p>
+  <p>Osciloskop ukázal deformovaný průběh CAN-H a CAN-L. Po odpojení ABS se průběh významně zlepšil.</p>
+
+  <h2>Izolace závady</h2>
+  <p>Postupně byly odpojovány podezřelé moduly. Snímač stáčení/příčného zrychlení závadu nezměnil. Výrazná změna nastala až po odpojení ABS/EBCM.</p>
+  <p>Konektor ABS měl dva průchozí páry CAN. Pro test bez ABS bylo nutné zachovat průchod sběrnice: CAN-H propojit s CAN-H, CAN-L s CAN-L a doplnit zakončení 120 Ω mezi H a L. Tím bylo možné spustit zbytek sítě bez vadné ABS elektroniky.</p>
+
+  <h2>Skutečná příčina</h2>
+  <p>Vadná ABS jednotka po zapnutí narušovala CAN komunikaci. Zároveň se ukázalo rizikové konstrukční umístění ABS: jednotka je pod nádobou chladicí kapaliny a v prostoru, kam se může dostávat voda z oblasti pod stěrači. Krycí plast v odtokové oblasti je pouze nasunutý a při dešti může voda téct směrem k ABS.</p>
+
+  <div class="warn">
+    <strong>Důležitá kontrola u podobné závady:</strong> před odsouzením CAN kabeláže zkontrolovat konektor ABS, stopy po vodě, oxidaci, napájení a kostry jednotky a odtok vody pod čelním sklem.
+  </div>
+
+  <h2>Oprava</h2>
+  <ul>
+    <li>oprava / výměna ABS jednotky,</li>
+    <li>kontrola CAN po opravě,</li>
+    <li>obnovení komunikace všech jednotek a funkce posilovače,</li>
+    <li>vymazání následných DTC.</li>
+  </ul>
+
+  <h2>Následná past: P0315 a spojka</h2>
+  <p>Po dlouhém odpojení baterie se objevila ztracená adaptace klikového systému a poloha spojkového pedálu. Launch při automaticky zvolené variantě ECU učicí funkce odmítal hláškou „Stop Vehicle And Stop Engine!“.</p>
+  <p>V seznamu bylo více variant řídicí jednotky motoru. Po ručním výběru poslední varianty začala fungovat procedura naučení klikového/reluctor systému i naučení polohy spojkového pedálu.</p>
+
+  <h2>Slepé cesty a poučení</h2>
+  <ul>
+    <li>správných přibližně 60 Ω mezi CAN-H a CAN-L ještě neznamená, že všechny transceivery fungují za provozu,</li>
+    <li>odpor CAN se nemá interpretovat při aktivní komunikaci,</li>
+    <li>pinout z obecného internetového schématu se nemusí shodovat s konkrétní variantou ABS,</li>
+    <li>pokud univerzální diagnostika servisní funkci nabízí, ale opakovaně ji odmítá, vyzkoušet jinou identifikaci/variantu ECU,</li>
+    <li>u této Merivy vždy myslet na zatékání k ABS.</li>
+  </ul>
+
+  <p><strong>Stav:</strong> vozidlo po opravě funkční.</p>
+</main>
+</body>
+</html>
