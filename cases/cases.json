@@ -98,6 +98,44 @@
       "repair": "Vozidlo předáno k likvidaci.",
       "status": "UKONČENO – EKONOMICKY NEOPRAVENO",
       "url": "/cases/ford-smax-cmax-20tdci-dpf.html"
+    },
+    {
+      "id": "ford-transit-custom-prave-tlumene-bcm",
+      "make": "Ford",
+      "model": "Transit Custom",
+      "vin": "WF01XXTTG1EB86140",
+      "symptoms": ["nesvítí pravé tlumené světlo", "bez napětí na výstupu BCM"],
+      "systems": ["BCM", "osvětlení", "kabeláž"],
+      "keywords": ["pravé tlumené", "potkávací světlo", "pin 8", "BCM", "přecínování", "modrozelený vodič", "pravé světlo", "500000 km"],
+      "cause": "Porucha v napájecí cestě pravého tlumeného světla přes BCM a poškozená kabeláž v pravé přední části vozu.",
+      "repair": "Přecínování BCM, oprava kabeláže kolem pravého světlometu, vymazání DTC.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/ford-transit-custom-prave-tlumene-bcm.html"
+    },
+    {
+      "id": "vw-touran-klimatizace-pojistka-cidla",
+      "make": "Volkswagen",
+      "model": "Touran",
+      "symptoms": ["klimatizace nefunguje", "na tlakovém čidle chybí +12 V"],
+      "systems": ["klimatizace", "napájení", "pojistky"],
+      "keywords": ["Touran klima", "tlakové čidlo klimatizace", "pin 3", "bez 12 V", "chybějící pojistka", "pojistka klimatizace", "AC senzor"],
+      "cause": "Chybějící pojistka v napájecí větvi tlakového čidla klimatizace.",
+      "repair": "Doplnění pojistky, kontrola napájení, vymazání DTC a ověření funkce klimatizace.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/vw-touran-klimatizace-pojistka-cidla.html"
+    },
+    {
+      "id": "skoda-octavia-ii-android-radio-can-modul",
+      "make": "Škoda",
+      "model": "Octavia II",
+      "year": 2005,
+      "symptoms": ["Android rádio špatně čte klíček", "rádio nečte správně dveře"],
+      "systems": ["CAN", "rádio", "komfortní síť"],
+      "keywords": ["Android rádio", "CANBUS decoder", "Raise", "SimpleSoft", "klíček", "dveře", "uspávání rádia", "Octavia 2 rádio"],
+      "cause": "Nesprávný typ CANBUS modulu k aftermarket Android rádiu.",
+      "repair": "Výměna za CANBUS modul Raise vhodný pro starší provedení vozu.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/skoda-octavia-ii-android-radio-can-modul.html"
     }
   ]
 }
