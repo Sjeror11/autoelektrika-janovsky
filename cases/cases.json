@@ -1,6 +1,6 @@
 {
   "project": "Autoelektrika Janovský – databáze oprav",
-  "updated": "2026-08-18",
+  "updated": "2026-08-19",
   "statuses": [
     "VYŘEŠENO",
     "ROZPRACOVÁNO",
@@ -43,7 +43,8 @@
       "systems": ["klimatizace"],
       "cause": "Vadný kompresor, zaseknutý regulační ventil zdvihu/výkonu kompresoru.",
       "repair": "Výměna celého kompresoru; u konstrukce bez magnetické spojky nebyla zvolena pouze výměna regulačního ventilu.",
-      "status": "VYŘEŠENO"
+      "status": "VYŘEŠENO",
+      "url": "/cases/skoda-superb-2013-klimatizace-kompresor.html"
     },
     {
       "id": "kia-14-gdi-p0087",
@@ -53,7 +54,8 @@
       "systems": ["vysokotlaké palivo"],
       "cause": "Vadný ventil řízení tlaku na vysokotlakém čerpadle.",
       "repair": "Výměna regulačního ventilu tlaku na čerpadle.",
-      "status": "VYŘEŠENO"
+      "status": "VYŘEŠENO",
+      "url": "/cases/kia-14-gdi-p0087.html"
     },
     {
       "id": "skoda-octavia-2005-imobilizer-pristrojovka",
@@ -64,7 +66,8 @@
       "systems": ["imobilizér", "přístrojová deska"],
       "cause": "Vadný spoj v přístrojové desce v napájení čtecího kroužku transpondéru.",
       "repair": "Oprava spoje v přístrojové desce.",
-      "status": "VYŘEŠENO"
+      "status": "VYŘEŠENO",
+      "url": "/cases/skoda-octavia-2005-imobilizer-pristrojovka.html"
     },
     {
       "id": "dacia-benzin-podpalené-ventily",
@@ -74,7 +77,8 @@
       "systems": ["motor", "hlava válců", "rozvody"],
       "cause": "Vadná hlava motoru a podpálené ventily.",
       "repair": "Oprava sedel, výměna ventilů, přebroušení hlavy a nové rozvody.",
-      "status": "VYŘEŠENO"
+      "status": "VYŘEŠENO",
+      "url": "/cases/dacia-benzin-podpalené-ventily.html"
     },
     {
       "id": "ford-smax-cmax-20tdci-dpf",
@@ -85,7 +89,8 @@
       "systems": ["DPF", "výfuk"],
       "cause": "Případ nebyl technicky dokončen; další oprava by převýšila ekonomickou hodnotu vozidla.",
       "repair": "Vozidlo předáno k likvidaci.",
-      "status": "UKONČENO – EKONOMICKY NEOPRAVENO"
+      "status": "UKONČENO – EKONOMICKY NEOPRAVENO",
+      "url": "/cases/ford-smax-cmax-20tdci-dpf.html"
     }
   ]
 }
