@@ -15,7 +15,9 @@ Produkční web autoelektrikářských služeb Lukáše Janovského s veřejnou 
 - kontaktní formulář připravující e-mail pomocí `mailto:`;
 - mobilní navigace;
 - skutečný AI diagnostický asistent s navazující konverzací;
+- AI asistent před odesláním dotazu lokálně vyhledá relevantní záznamy v databázi oprav a přidá je jako diagnostický kontext;
 - veřejná databáze skutečných oprav v `cases/`;
+- vyhledávání a filtrování případů podle značky, DTC, systému a příznaků;
 - strojově čitelný přehled případů v `cases/cases.json`;
 - samostatné SEO stránky případů s `TechArticle` structured data;
 - `robots.txt` a `sitemap.xml` pro indexaci;
@@ -35,6 +37,7 @@ Produkční web autoelektrikářských služeb Lukáše Janovského s veřejnou 
 ├── css/style.css
 ├── images/
 ├── js/main.js
+├── js/cases-search.js
 └── js/gemini-chat.js
 ```
 
@@ -51,7 +54,7 @@ Každý případ má pokud možno jednotnou strukturu:
 - ověření výsledku;
 - stav `VYŘEŠENO`, `ROZPRACOVÁNO`, `NEVYŘEŠENO` nebo `UKONČENO – EKONOMICKY NEOPRAVENO`.
 
-Soubor `cases/cases.json` slouží jako jednoduchý datový zdroj pro budoucí vyhledávání, filtrování a AI práci s archivem.
+Soubor `cases/cases.json` je datový zdroj pro vyhledávání, filtrování a AI práci s archivem. Frontend AI asistenta porovná nový dotaz s případy, vybere nejvýše dva relevantní záznamy a přidá je do požadavku jako interní kontext. Původní text návštěvníka zůstává v historii chatu beze změny a podobný případ se nesmí vydávat za jistou diagnózu aktuálního vozidla.
 
 ## Lokální spuštění
 
@@ -74,7 +77,7 @@ musí vždy zůstat v kořeni a obsahovat:
 autoelektrika-janovsky.cz
 ```
 
-Po každém nasazení se kontroluje hlavní doména, `/cases/`, `sitemap.xml`, kontakty, mobilní vzhled a jeden skutečný AI dotaz.
+Po každém nasazení se kontroluje hlavní doména, `/cases/`, `sitemap.xml`, kontakty, mobilní vzhled a jeden skutečný AI dotaz. U AI databáze se navíc ověřuje, že dotaz na známý případ (např. Meriva + výpadek serva) přidá odpovídající kontext, zatímco nesouvisející dotaz žádný případ nepřipojí.
 
 ## Provozní dokumentace
 
