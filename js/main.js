@@ -45,30 +45,64 @@ aiDemoWindow?.addEventListener('keydown', event => {
     }
 });
 
-const addAiMessage = (message, role = 'assistant') => {
+const addAiMessage = (message, role = 'assistant', matchedCases = []) => {
     if (!aiMessages) return;
+
     const wrapper = document.createElement('div');
     wrapper.className = `ai__message ai__message--${role}`;
+
     const strong = document.createElement('strong');
     strong.textContent = role === 'assistant' ? 'Asistent:' : 'Vy:';
+
     const text = document.createElement('p');
     text.textContent = message;
     wrapper.append(strong, text);
+
+    if (role === 'assistant' && Array.isArray(matchedCases) && matchedCases.length > 0) {
+        const references = document.createElement('div');
+        references.style.marginTop = '0.8rem';
+        references.style.paddingTop = '0.7rem';
+        references.style.borderTop = '1px solid rgba(78, 169, 255, 0.18)';
+
+        const label = document.createElement('small');
+        label.textContent = 'Podobné skutečné případy z dílny:';
+        label.style.display = 'block';
+        label.style.marginBottom = '0.35rem';
+        references.append(label);
+
+        matchedCases.forEach((repairCase) => {
+            if (!repairCase?.url || !repairCase?.title) return;
+
+            const link = document.createElement('a');
+            link.href = repairCase.url;
+            link.textContent = repairCase.title;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.style.display = 'block';
+            link.style.marginTop = '0.3rem';
+            link.style.color = 'var(--primary)';
+            link.style.textDecoration = 'underline';
+            references.append(link);
+        });
+
+        if (references.children.length > 1) {
+            wrapper.append(references);
+        }
+    }
+
     aiMessages.append(wrapper);
     aiMessages.scrollTo({ top: aiMessages.scrollHeight, behavior: 'smooth' });
 };
 
-// Real AI Chat s Gemini API
+// Real AI Chat s Gemini API přes zabezpečený backend
 aiDemoForm?.addEventListener('submit', async event => {
     event.preventDefault();
     const value = aiInput?.value.trim();
     if (!value) return;
 
-    // Zobraz user message
     addAiMessage(value, 'user');
     aiInput.value = '';
 
-    // Zobraz loading indicator
     const loadingMsg = document.createElement('div');
     loadingMsg.className = 'ai__message ai__message--assistant ai__message--loading';
     loadingMsg.innerHTML = '<strong>Asistent:</strong><p>Píšu odpověď...</p>';
@@ -76,15 +110,18 @@ aiDemoForm?.addEventListener('submit', async event => {
     aiMessages.scrollTo({ top: aiMessages.scrollHeight, behavior: 'smooth' });
 
     try {
-        // Zavolej Gemini API
-        const response = await window.GeminiChat.send(value);
-
-        // Odstraň loading
+        const result = await window.GeminiChat.send(value);
         loadingMsg.remove();
 
-        // Zobraz AI odpověď
-        addAiMessage(response, 'assistant');
-
+        if (typeof result === 'string') {
+            addAiMessage(result, 'assistant');
+        } else {
+            addAiMessage(
+                result?.text || 'Odpověď se nepodařilo načíst.',
+                'assistant',
+                result?.matchedCases || []
+            );
+        }
     } catch (error) {
         console.error('AI Chat Error:', error);
         loadingMsg.remove();
@@ -101,7 +138,6 @@ contactForm?.addEventListener('submit', event => {
     const phone = document.getElementById('phone');
     const message = document.getElementById('message');
 
-    // Validation
     if (!name?.value.trim()) {
         alert('⚠️ Prosím vyplňte vaše jméno');
         name?.focus();
@@ -126,7 +162,6 @@ contactForm?.addEventListener('submit', event => {
         return;
     }
 
-    // Create mailto link
     const subject = encodeURIComponent('Poptávka z webu - Autoelektrika Janovský');
     const body = encodeURIComponent(
         `Jméno: ${name.value}\n` +
@@ -136,11 +171,8 @@ contactForm?.addEventListener('submit', event => {
     );
 
     const mailtoLink = `mailto:lakyjanovsky@seznam.cz?subject=${subject}&body=${body}`;
-
-    // Open email client
     window.location.href = mailtoLink;
 
-    // Reset form after short delay
     setTimeout(() => {
         contactForm.reset();
         alert('✅ Email byl připraven ve vašem emailovém klientu. Stačí ho odeslat.');
