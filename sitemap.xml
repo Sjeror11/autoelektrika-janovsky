@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://autoelektrika-janovsky.cz/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://autoelektrika-janovsky.cz/cases/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://autoelektrika-janovsky.cz/cases/skoda-octavia-iii-abs-mk100-tlak.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://autoelektrika-janovsky.cz/cases/opel-meriva-b-can-abs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://autoelektrika-janovsky.cz/cases/honda-crv-iii-klimatizace-rele.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://autoelektrika-janovsky.cz/cases/skoda-superb-2013-klimatizace-kompresor.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -9,4 +10,9 @@
   <url><loc>https://autoelektrika-janovsky.cz/cases/skoda-octavia-2005-imobilizer-pristrojovka.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://autoelektrika-janovsky.cz/cases/dacia-benzin-podpalené-ventily.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://autoelektrika-janovsky.cz/cases/ford-smax-cmax-20tdci-dpf.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://autoelektrika-janovsky.cz/cases/ford-transit-custom-prave-tlumene-bcm.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://autoelektrika-janovsky.cz/cases/vw-touran-klimatizace-pojistka-cidla.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://autoelektrika-janovsky.cz/cases/skoda-octavia-ii-android-radio-can-modul.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://autoelektrika-janovsky.cz/cases/fiat-ducato-2022-zadni-snimac-p065a.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://autoelektrika-janovsky.cz/cases/bomag-bmp851-cidlo-tlaku-oleje.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
