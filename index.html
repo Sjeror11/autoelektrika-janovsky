@@ -83,6 +83,7 @@
         <nav class="nav" id="mainNav">
             <a href="#services">Služby</a>
             <a href="cases/">Případy z dílny</a>
+            <a href="coding/">VAG kódování</a>
             <a href="#process">Postup</a>
             <a href="#contact">Kontakt</a>
         </nav>
@@ -152,6 +153,30 @@
                         <h3>Databáze oprav</h3>
                         <p>Aktuálně evidujeme vyřešené opravy i případy ukončené z ekonomických důvodů. Další záznamy budeme průběžně doplňovat.</p>
                         <a class="button button--primary" href="cases/">Zobrazit všechny případy</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="coding-preview">
+            <div class="container">
+                <h2>Ověřené VAG kódování</h2>
+                <p style="color:var(--text-muted);max-width:760px;margin-bottom:2rem;">Ukládáme konkrétní VCDS postupy včetně čísla řídicí jednotky, Byte/Bit, původního kódování a výsledku. Ověřené zásahy jsou oddělené od obecných referenčních postupů.</p>
+                <div class="cards">
+                    <article class="card">
+                        <h3>BCM PQ35 – LED osvětlení SPZ</h3>
+                        <p>Vypnutí hlídání osvětlení registrační značky a přepnutí výstupu pro LED. Ověřeno na BCM 1K0 937 087 AK.</p>
+                        <a class="button button--ghost" href="coding/vag-bcm-pq35-led-spz.html">Otevřít postup</a>
+                    </article>
+                    <article class="card">
+                        <h3>Roomster 2012 – SAFELOCK</h3>
+                        <p>BCM PQ25 6R7 937 087 K: Byte 0 Bit 1, změna 64 → 66. Uložené je celé původní i nové dlouhé kódování.</p>
+                        <a class="button button--ghost" href="coding/skoda-roomster-2012-safe-lock.html">Otevřít postup</a>
+                    </article>
+                    <article class="card">
+                        <h3>VAG – kódování a úpravy funkcí</h3>
+                        <p>Samostatná databáze ověřených a referenčních postupů pro VCDS, kterou budeme průběžně rozšiřovat.</p>
+                        <a class="button button--primary" href="coding/">Zobrazit kódování</a>
                     </article>
                 </div>
             </div>
