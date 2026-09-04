@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Škoda/VAG – elektrické sklápění zrcátek | Autoelektrika Janovský</title>
+  <meta name="description" content="Referenční postup VCDS pro aktivaci nebo deaktivaci elektrického sklápění zrcátek ve dveřních jednotkách 42 a 52 u vybraných vozů VAG." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://autoelektrika-janovsky.cz/coding/vag-sklapeni-zrcatek.html" />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>.case{max-width:920px;margin:0 auto;padding:48px 20px}.summary{padding:18px;border-radius:14px;background:rgba(0,0,0,.04)}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}.fact{padding:14px;border:1px solid rgba(0,0,0,.12);border-radius:12px}.status{display:inline-block;padding:5px 10px;border-radius:999px;background:rgba(255,190,70,.18);font-weight:700}.code{overflow:auto;padding:14px;border-radius:10px;background:#111827;color:#e5e7eb;font-family:monospace}.case li{margin:.45rem 0}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Škoda/VAG – elektrické sklápění zrcátek","author":{"@type":"Organization","name":"Autoelektrika Janovský"},"mainEntityOfPage":"https://autoelektrika-janovsky.cz/coding/vag-sklapeni-zrcatek.html"}</script>
+</head>
+<body>
+  <main class="case">
+    <p><a href="./">← VAG kódování</a></p>
+    <span class="status">REFERENČNÍ POSTUP – OVĚŘIT DLE JEDNOTKY</span>
+    <h1>Škoda/VAG – elektrické sklápění zrcátek</h1>
+    <div class="facts"><div class="fact"><strong>Diagnostika</strong><br>VCDS</div><div class="fact"><strong>Řidičovy dveře</strong><br>42</div><div class="fact"><strong>Spolujezdcovy dveře</strong><br>52</div><div class="fact"><strong>Typ</strong><br>starší krátké kódování</div></div>
+    <div class="summary"><strong>Princip:</strong> u vybraných starších dveřních jednotek VAG se funkce elektrického sklápění zrcátek přidává hodnotou <strong>4096</strong> do kódování dveřní jednotky. Pro deaktivaci se 4096 odečte.</div>
+
+    <h2>Postup</h2>
+    <ol>
+      <li>Uložit původní kódování obou dveřních jednotek.</li>
+      <li>Otevřít <strong>42 – Elektronika dveří řidiče</strong> → <strong>Kódování – 07</strong>.</li>
+      <li>Pokud jednotka používá toto starší krátké kódování, pro aktivaci přičíst <strong>4096</strong>; pro deaktivaci odečíst <strong>4096</strong>.</li>
+      <li>Stejnou kontrolu provést v <strong>52 – Elektronika dveří spolujezdce</strong>.</li>
+      <li>Po zápisu vypnout a zapnout zapalování a ověřit funkci ovladačem zrcátek i dálkovým zamykáním podle výbavy vozu.</li>
+    </ol>
+
+    <h2>Příklad výpočtu</h2>
+    <p>Je-li původní krátké kódování například <strong>0004342</strong>, nepřepisuje se slepě hodnotou z jiného auta. Nejprve se ověří, zda konkrétní jednotka funkci podporuje, a teprve potom se k její vlastní hodnotě přičte nebo odečte 4096.</p>
+
+    <h2>Důležité omezení</h2>
+    <p>Tento postup není univerzální pro všechny Yeti, Superb, Octavia ani další vozy VAG. Novější dveřní jednotky mohou používat dlouhé kódování nebo adaptační kanály a funkce může být závislá na typu motorku, přepínače a výbavě dveří. Proto zde záměrně neuvádíme jeden univerzální Byte/Bit pro všechny vozy.</p>
+  </main>
+</body>
+</html>
