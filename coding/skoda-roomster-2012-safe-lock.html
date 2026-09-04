@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Škoda Roomster 2012 – vypnutí SAFELOCK | Autoelektrika Janovský</title>
+  <meta name="description" content="Ověřený postup VCDS pro Škoda Roomster 2012 s BCM PQ25 6R7 937 087 K: vypnutí SAFELOCK přes Byte 0 Bit 1 včetně zálohy dlouhého kódování." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://autoelektrika-janovsky.cz/coding/skoda-roomster-2012-safe-lock.html" />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>.case{max-width:920px;margin:0 auto;padding:48px 20px}.summary{padding:18px;border-radius:14px;background:rgba(0,0,0,.04)}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}.fact{padding:14px;border:1px solid rgba(0,0,0,.12);border-radius:12px}.status{display:inline-block;padding:5px 10px;border-radius:999px;background:#e9f8ee;font-weight:700}.code{overflow:auto;padding:14px;border-radius:10px;background:#111827;color:#e5e7eb;font-family:monospace;word-break:break-all}.case li{margin:.45rem 0}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Škoda Roomster 2012 – vypnutí SAFELOCK","author":{"@type":"Organization","name":"Autoelektrika Janovský"},"mainEntityOfPage":"https://autoelektrika-janovsky.cz/coding/skoda-roomster-2012-safe-lock.html"}</script>
+</head>
+<body>
+  <main class="case">
+    <p><a href="./">← VAG kódování</a></p>
+    <span class="status">OVĚŘENO V PRAXI</span>
+    <h1>Škoda Roomster 2012 – vypnutí SAFELOCK</h1>
+    <div class="facts"><div class="fact"><strong>Diagnostika</strong><br>VCDS</div><div class="fact"><strong>Jednotka</strong><br>09 – Centrální elektrika</div><div class="fact"><strong>BCM</strong><br>6R7 937 087 K</div><div class="fact"><strong>Systém</strong><br>PQ25 BCM H27 0532</div></div>
+    <div class="summary"><strong>Výsledek:</strong> po změně kódování se vůz zamyká bez aktivace SAFELOCK. Funkce byla na konkrétním vozidle po zápisu ověřena.</div>
+
+    <h2>Postup ve VCDS</h2>
+    <ol>
+      <li>Otevřít <strong>09 – Centrální elektrika</strong>.</li>
+      <li>Zvolit <strong>Kódování – 07</strong> a potom <strong>Dlouhé kódování</strong>.</li>
+      <li>Vybrat <strong>Byte 0</strong>.</li>
+      <li>Nastavit <strong>Bit 1 = ON</strong> – centrální zamykání bez funkce SAFE.</li>
+      <li>Zapsat nové kódování a ověřit zamknutí i odemknutí všech dveří.</li>
+    </ol>
+
+    <h2>Konkrétní změna</h2>
+    <p>Byte 0 se na tomto voze změnil z <strong>64</strong> na <strong>66</strong>.</p>
+
+    <h2>Záloha dlouhého kódování</h2>
+    <p><strong>Původní kódování:</strong></p>
+    <div class="code">64980B3808010000003808002C2B08C000C0400F60000000020000000000</div>
+    <p><strong>Nové kódování bez SAFELOCK:</strong></p>
+    <div class="code">66980B3808010000003808002C2B08C000C0400F60000000020000000000</div>
+
+    <h2>Kontrola po zápisu</h2>
+    <ul>
+      <li>vymazat případné závady v jednotce 09,</li>
+      <li>vypnout a zapnout zapalování,</li>
+      <li>ověřit zamknutí dálkovým ovládáním,</li>
+      <li>ověřit otevření dveří zevnitř po zamknutí,</li>
+      <li>zkontrolovat funkci všech dveřních zámků.</li>
+    </ul>
+
+    <h2>Poznámka</h2>
+    <p>Postup je uložen pro BCM <strong>6R7 937 087 K / PQ25 BCM H27 0532</strong>. Před změnou vždy uložit celé původní kódování. U jiné verze BCM nebo softwaru se význam jednotlivých bitů může lišit.</p>
+  </main>
+</body>
+</html>
