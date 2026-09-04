@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCM PQ35 – vypnutí hlídání SPZ a LED režim | Autoelektrika Janovský</title>
+  <meta name="description" content="Ověřený postup VCDS pro BCM PQ35 1K0 937 087 AK: vypnutí studené diagnostiky osvětlení SPZ a aktivace režimu LED." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://autoelektrika-janovsky.cz/coding/vag-bcm-pq35-led-spz.html" />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>.case{max-width:920px;margin:0 auto;padding:48px 20px}.summary{padding:18px;border-radius:14px;background:rgba(0,0,0,.04)}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}.fact{padding:14px;border:1px solid rgba(0,0,0,.12);border-radius:12px}.status{display:inline-block;padding:5px 10px;border-radius:999px;background:#e9f8ee;font-weight:700}.code{overflow:auto;padding:14px;border-radius:10px;background:#111827;color:#e5e7eb;font-family:monospace}.case li{margin:.45rem 0}</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"BCM PQ35 – vypnutí hlídání SPZ a LED režim","author":{"@type":"Organization","name":"Autoelektrika Janovský"},"mainEntityOfPage":"https://autoelektrika-janovsky.cz/coding/vag-bcm-pq35-led-spz.html"}</script>
+</head>
+<body>
+  <main class="case">
+    <p><a href="./">← VAG kódování</a></p>
+    <span class="status">OVĚŘENO V PRAXI</span>
+    <h1>BCM PQ35 – vypnutí hlídání osvětlení SPZ a režim LED</h1>
+    <div class="facts"><div class="fact"><strong>Diagnostika</strong><br>VCDS</div><div class="fact"><strong>Jednotka</strong><br>09 – Centrální elektrika</div><div class="fact"><strong>BCM</strong><br>1K0 937 087 AK</div><div class="fact"><strong>SW</strong><br>0771</div></div>
+    <div class="summary"><strong>Výsledek:</strong> vypnutí hlídání osvětlení SPZ a přepnutí výstupu pro LED bylo na tomto vozidle funkční.</div>
+    <h2>1. Vypnutí hlídání osvětlení SPZ</h2>
+    <ul><li>09 – Centrální elektrika</li><li>Kódování 07</li><li>Dlouhé kódování</li><li><strong>Byte 23, Bit 6 = OFF</strong></li></ul>
+    <p>Tím se vypne studená diagnostika osvětlení registrační značky.</p>
+    <h2>2. Přepnutí pro LED osvětlení SPZ</h2>
+    <ul><li><strong>Byte 17, Bit 7 = ON</strong></li><li>u tohoto vozu se Byte 17 změnil z <strong>70 na F0</strong>.</li></ul>
+    <h2>Záloha kódování</h2>
+    <p><strong>Původní:</strong></p><div class="code">66000ABFE80518C4400800C0510089E44B7000AE726D8720808140040040</div>
+    <p><strong>Po změně Byte 17:</strong></p><div class="code">66000ABFE80518C4400800C0510089E44BF000AE726D8720808140040040</div>
+    <h2>Po kódování</h2>
+    <ul><li>vymazat závady v jednotce 09,</li><li>vypnout a zapnout zapalování,</li><li>zapnout osvětlení a ověřit funkci SPZ i hlášení žárovek.</li></ul>
+    <h2>Poznámka</h2>
+    <p>Před úpravou vždy uložit kompletní původní kódování. U jiné verze BCM nebo softwaru může být rozložení bitů odlišné.</p>
+  </main>
+</body>
+</html>
