@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAG kódování a úpravy funkcí | Autoelektrika Janovský</title>
+  <meta name="description" content="Ověřené postupy kódování VCDS z dílny Autoelektrika Janovský: BCM, osvětlení SPZ, LED, SAFELOCK a elektrické sklápění zrcátek." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://autoelektrika-janovsky.cz/coding/" />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .guides{max-width:1050px;margin:0 auto;padding:48px 20px}.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:28px}.guide-card{background:var(--bg-muted);border:1px solid var(--card-border);border-radius:16px;padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.18)}.guide-card h2{font-size:1.25rem}.guide-card p{color:var(--text-muted)}.badge{display:inline-block;padding:4px 9px;border-radius:999px;background:rgba(70,190,110,.18);font-size:.82rem;font-weight:600}.note{margin-top:30px;padding:18px;border-left:4px solid var(--primary);background:rgba(78,169,255,.06)}
+  </style>
+</head>
+<body>
+  <main class="guides">
+    <p><a href="../">← Autoelektrika Janovský</a></p>
+    <h1>VAG – kódování a úpravy funkcí</h1>
+    <p>Praktické postupy uložené při skutečné diagnostice a kódování vozidel. U každého návodu uvádíme konkrétní řídicí jednotku, Byte/Bit a zálohu známého kódování, pokud je k dispozici.</p>
+
+    <div class="guide-grid">
+      <article class="guide-card">
+        <span class="badge">OVĚŘENO V PRAXI</span>
+        <h2><a href="vag-bcm-pq35-led-spz.html">BCM PQ35 – vypnutí hlídání SPZ a režim LED</a></h2>
+        <p>VCDS, jednotka 09. Vypnutí studené diagnostiky osvětlení SPZ a aktivace režimu LED na BCM 1K0 937 087 AK.</p>
+      </article>
+
+      <article class="guide-card">
+        <span class="badge">OVĚŘENO V PRAXI</span>
+        <h2><a href="skoda-roomster-2012-safe-lock.html">Škoda Roomster 2012 – vypnutí SAFELOCK</a></h2>
+        <p>BCM PQ25 6R7 937 087 K. Byte 0 Bit 1, změna 64 → 66, včetně kompletní zálohy původního a nového dlouhého kódování.</p>
+      </article>
+
+      <article class="guide-card">
+        <span class="badge">ULOŽENÝ POSTUP</span>
+        <h2><a href="vag-vypnuti-sklapeni-zrcatek.html">Škoda/VAG – vypnutí elektrického sklápění zrcátek</a></h2>
+        <p>Kódování v obou dveřních jednotkách. Byte 4 Bit 4 vypnout; u známého modulu 5Q4 959 593 C změna D0 → C0.</p>
+      </article>
+    </div>
+
+    <div class="note"><strong>Důležité:</strong> před změnou vždy uložit kompletní původní kódování. Stejný model auta může mít jinou verzi řídicí jednotky nebo software, proto je rozhodující číslo jednotky a popis bitu ve VCDS.</div>
+  </main>
+</body>
+</html>
