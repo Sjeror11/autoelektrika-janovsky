@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CASE 125 / WX125 – nefunkční elektronické ovládání plynu | Autoelektrika Janovský</title>
+  <meta name="description" content="Skutečný případ CASE 125 / WX125: motor běžel jen na volnoběh a nereagoval na elektronické ovládání plynu. Vadná řídicí jednotka Siemens VDO, proražená 6,8V TVS 1.5KE6.8A." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://autoelektrika-janovsky.cz/cases/case-wx125-ovladani-plynu-ridici-jednotka.html" />
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .case{max-width:920px;margin:0 auto;padding:48px 20px}.summary{padding:18px;border-radius:14px;background:rgba(0,0,0,.04)}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}.fact{padding:14px;border:1px solid rgba(0,0,0,.12);border-radius:12px}.status{display:inline-block;padding:5px 10px;border-radius:999px;background:#e9f8ee;font-weight:700}.warning{padding:16px;border-left:4px solid #d99b2b;background:rgba(217,155,43,.08);margin:20px 0}.tech{padding:16px;border-left:4px solid #4ea9ff;background:rgba(78,169,255,.07);margin:20px 0}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"CASE 125 / WX125 – nefunkční elektronické ovládání plynu",
+    "description":"Diagnostický případ elektronického ovládání plynu s vadnou řídicí jednotkou Siemens VDO a proraženou 6,8V TVS diodou.",
+    "author":{"@type":"Organization","name":"Autoelektrika Janovský"},
+    "publisher":{"@type":"Organization","name":"Autoelektrika Janovský"},
+    "mainEntityOfPage":"https://autoelektrika-janovsky.cz/cases/case-wx125-ovladani-plynu-ridici-jednotka.html"
+  }
+  </script>
+</head>
+<body>
+<main class="case">
+  <p><a href="./">← Případy z dílny</a></p>
+  <span class="status">VYŘEŠENO</span>
+  <h1>CASE 125 / WX125 – motor zůstal na volnoběhu, elektronický plyn nereagoval</h1>
+
+  <div class="facts">
+    <div class="fact"><strong>Stroj</strong><br>CASE 125 / WX125</div>
+    <div class="fact"><strong>Systém</strong><br>elektronické ovládání plynu</div>
+    <div class="fact"><strong>Řídicí jednotka</strong><br>Siemens VDO / Engineering Solutions</div>
+    <div class="fact"><strong>P/N jednotky</strong><br>72111551</div>
+  </div>
+
+  <div class="summary">
+    <strong>Výsledek:</strong> motor šel nastartovat, ale zůstával pouze na volnoběhu a nereagoval na otočný ovladač otáček. Kabeláž stroje nebyla ve zkratu. Závada byla uvnitř řídicí jednotky elektronického plynu, kde byla proražená a tepelně poškozená ochranná 6,8V TVS dioda. Po opravě jednotky a osazení 1.5KE6.8A začalo ovládání plynu znovu fungovat.
+  </div>
+
+  <h2>Příznaky</h2>
+  <ul>
+    <li>motor normálně nastartoval,</li>
+    <li>otáčky zůstaly na volnoběhu,</li>
+    <li>otočný ovladač plynu nereagoval,</li>
+    <li>funkce MEMORY / AUTO n/min neovládaly otáčky správně,</li>
+    <li>VDO aktuátor plynu při samostatném testu mechanicky pracoval, ale měl nezvyklé křupavé zvuky.</li>
+  </ul>
+
+  <h2>Kontrola VDO aktuátoru</h2>
+  <p>Aktuátor byl proměřen samostatně. Elektromagnetická spojka fungovala, elektromotor se dokázal pohybovat oběma směry a zpětnovazební potenciometr měnil odpor při pohybu páky. Tím se podezření přesunulo z kabeláže a samotného ovladače na řídicí elektroniku.</p>
+
+  <div class="tech">
+    <strong>Ověřené části výkonového stupně ECU:</strong>
+    <ul>
+      <li><strong>LMD18200T</strong> – H-můstek pro elektromotor aktuátoru,</li>
+      <li><strong>BUK209-50Y</strong> – výkonový high-side spínač další zátěže aktuátoru,</li>
+      <li><strong>IRF9530N</strong> – P-kanálový výkonový MOSFET v napájecí části,</li>
+      <li><strong>1.5KE6.8A</strong> – jednosměrná 6,8V TVS ochrana.</li>
+    </ul>
+  </div>
+
+  <h2>Nalezená závada v řídicí jednotce</h2>
+  <p>Jednotka po otevření výrazně zapáchala po přehřáté elektronice. Na desce byla viditelně tepelně poškozená axiální součástka označená 6.8A. Po vyletování byla při testu vodivá v obou směrech – byla proražená.</p>
+  <p>Podle zapojení na desce šlo o ochrannou 6,8V TVS/Zener větev proti GND. Původní rozměr odpovídal výkonovější řadě 1.5KE, proto byla jako náhrada použita <strong>1.5KE6.8A</strong>, nikoli menší 600W P6KE6.8A.</p>
+
+  <h2>Oprava a kontrola před montáží</h2>
+  <ol>
+    <li>vyletování proražené ochranné diody a kontrola, že na desce nezůstal tvrdý zkrat,</li>
+    <li>proměření výkonových cest LMD18200T, BUK209-50Y a IRF9530N,</li>
+    <li>osazení nové jednosměrné TVS 1.5KE6.8A ve správné polaritě,</li>
+    <li>kontrola kabeláže stroje proti šasi a ověření, že chráněný vodič není ve zkratu ani na +24 V,</li>
+    <li>zapojení opravené ECU a funkční zkouška.</li>
+  </ol>
+
+  <p><strong>Výsledek:</strong> po zapojení opravené řídicí jednotky elektronické ovládání otáček opět funguje.</p>
+
+  <div class="warning">
+    <strong>Doporučení:</strong> polohovací VDO aktuátor plynu mechanicky nevydává zdravý zvuk a při samostatném testu křupe. Přímá příčina poškození TVS nebyla definitivně potvrzena, proto doporučujeme aktuátor preventivně vyměnit, aby se snížilo riziko další poruchy.
+  </div>
+
+  <h2>Poučení z diagnostiky</h2>
+  <p>U této závady nebylo účelné hledat jednoduché reverzační relé. Směr elektromotoru je řízen přímo H-můstkem LMD18200T uvnitř ECU a další výkonové funkce zajišťují polovodičové spínače. Pokud CASE 125 nastartuje, ale nereaguje na elektronické ovládání plynu, vyplatí se vedle aktuátoru a kabeláže prověřit i samotnou řídicí jednotku a její výkonovou a ochrannou část.</p>
+
+  <p><strong>Stav:</strong> opraveno, stroj funkční.</p>
+</main>
+</body>
+</html>
