@@ -9,6 +9,34 @@
   ],
   "cases": [
     {
+      "id": "skoda-ecall-zalozni-baterie-reset-historie",
+      "make": "Škoda",
+      "model": "model neověřen",
+      "systems": [
+        "eCall",
+        "telematika",
+        "SOS"
+      ],
+      "symptoms": [
+        "červená kontrolka SOS",
+        "záložní baterie nouzového volání"
+      ],
+      "keywords": [
+        "3G0915089",
+        "3G0 915 089",
+        "5WA035282",
+        "5WA 035 282",
+        "MAS17566",
+        "VCDS",
+        "reset historie baterie",
+        "OCUGen3Low"
+      ],
+      "cause": "Závada záložní baterie eCall; po výměně bylo nutné resetovat její historii.",
+      "repair": "Výměna originální baterie a základní nastavení MAS17566-ENG114972; po smazání závad kontrolka SOS zelená.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/skoda-ecall-zalozni-baterie-reset-historie.html"
+    },
+    {
       "id": "mitsubishi-outlander-22-did-p0234-aktuator-turba",
       "make": "Mitsubishi",
       "model": "Outlander II",
