@@ -1,6 +1,6 @@
 {
   "project": "Autoelektrika Janovský – databáze oprav",
-  "updated": "2026-09-21",
+  "updated": "2026-10-14",
   "statuses": [
     "VYŘEŠENO",
     "ROZPRACOVÁNO",
@@ -8,6 +8,43 @@
     "UKONČENO – EKONOMICKY NEOPRAVENO"
   ],
   "cases": [
+    {
+      "id": "mitsubishi-outlander-22-did-p0234-aktuator-turba",
+      "make": "Mitsubishi",
+      "model": "Outlander II",
+      "year": 2008,
+      "engine": "2.2 DI-D 4HN",
+      "symptoms": [
+        "opožděný náběh turba kolem 3000 ot/min",
+        "P0234 přetlak turba",
+        "omezení výkonu při zátěži"
+      ],
+      "systems": [
+        "turbodmychadlo",
+        "VGT",
+        "elektronický aktuátor",
+        "MAP"
+      ],
+      "keywords": [
+        "Mitsubishi Outlander",
+        "4HN",
+        "P0234",
+        "P0299",
+        "P0235",
+        "repasované turbo",
+        "aktuátor turba",
+        "přetlak turba",
+        "plnicí tlak",
+        "3000 otáček",
+        "2000 otáček",
+        "variabilní geometrie",
+        "Launch X-431"
+      ],
+      "cause": "Nesprávná funkce regulace repasovaného turba s dodaným elektronickým aktuátorem; přesná vnitřní příčina nebyla laboratorně ověřena.",
+      "repair": "Přemontování původního elektronického aktuátoru; nástup výkonu přibližně od 2000 ot/min, nižší špičky plnicího tlaku, závěrečná zátěžová zkouška bez P0234.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/mitsubishi-outlander-22-did-p0234-aktuator-turba.html"
+    },
     {
       "id": "case-wx125-ovladani-plynu-ridici-jednotka",
       "make": "CASE",
