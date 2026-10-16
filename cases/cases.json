@@ -1,6 +1,6 @@
 {
   "project": "Autoelektrika Janovský – databáze oprav",
-  "updated": "2026-10-14",
+  "updated": "2026-10-16",
   "statuses": [
     "VYŘEŠENO",
     "ROZPRACOVÁNO",
@@ -8,6 +8,36 @@
     "UKONČENO – EKONOMICKY NEOPRAVENO"
   ],
   "cases": [
+    {
+      "id": "fiat-doblo-2001-svarene-kontakty-rele-svetel",
+      "make": "Fiat",
+      "model": "Doblò 223",
+      "year": 2001,
+      "engine": "223A5000",
+      "systems": [
+        "potkávací světla",
+        "relé",
+        "elektroinstalace"
+      ],
+      "symptoms": [
+        "potkávací světla svítí i při vypnutém klíčku",
+        "relé cvaká, ale nerozepíná"
+      ],
+      "keywords": [
+        "Fiat Doblo",
+        "Doblò 223",
+        "tlumená světla",
+        "potkávací světla",
+        "svařené kontakty",
+        "spečené relé",
+        "světla nejdou vypnout",
+        "relé cvaká"
+      ],
+      "cause": "Spečené silové kontakty relé potkávacích světel; relé slyšitelně cvakalo, ale kontakty zůstávaly spojené.",
+      "repair": "Výměna vadného relé; po výměně světla fungují správně.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/fiat-doblo-2001-svarene-kontakty-rele-svetel.html"
+    },
     {
       "id": "skoda-ecall-zalozni-baterie-reset-historie",
       "make": "Škoda",
