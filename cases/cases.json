@@ -1,6 +1,6 @@
 {
   "project": "Autoelektrika Janovský – databáze oprav",
-  "updated": "2026-10-16",
+  "updated": "2026-10-21",
   "statuses": [
     "VYŘEŠENO",
     "ROZPRACOVÁNO",
@@ -8,6 +8,44 @@
     "UKONČENO – EKONOMICKY NEOPRAVENO"
   ],
   "cases": [
+    {
+      "id": "ford-cmax-2017-tpms-nove-snimace-palubni-deska",
+      "make": "Ford",
+      "model": "C-MAX",
+      "year": 2017,
+      "engine": "1.0 EcoBoost",
+      "systems": [
+        "TPMS",
+        "snímače tlaku pneumatik",
+        "palubní počítač"
+      ],
+      "symptoms": [
+        "po montáži nových snímačů TPMS bylo potřeba jejich načtení do vozidla",
+        "ve FORScanu nebyla dostupná servisní funkce pro učení TPMS"
+      ],
+      "keywords": [
+        "Ford C-MAX",
+        "Ford Focus C-MAX",
+        "2017",
+        "1.0 EcoBoost",
+        "TPMS",
+        "senzory tlaku pneu",
+        "snímače tlaku pneumatik",
+        "nové snímače",
+        "naučení TPMS",
+        "párování ventilků",
+        "FORScan",
+        "BCMii",
+        "reset monitorování pneumatik",
+        "palubní deska",
+        "menu palubního počítače",
+        "OK"
+      ],
+      "cause": "Po výměně snímačů bylo potřeba inicializovat monitorování tlaku pneumatik. V použité verzi FORScanu nebyla nabízena samostatná servisní procedura TPMS.",
+      "repair": "Načtení nových snímačů se podařilo přímo přes nabídku monitorování tlaku pneumatik na palubní desce. Není nutný servisní reset jednotek ve FORScanu.",
+      "status": "VYŘEŠENO",
+      "url": "/cases/ford-cmax-2017-tpms-nove-snimace-palubni-deska.html"
+    },
     {
       "id": "fiat-doblo-2001-svarene-kontakty-rele-svetel",
       "make": "Fiat",

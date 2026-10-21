@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ford C-MAX 2017 – nové snímače TPMS přes palubní desku | Autoelektrika Janovský</title>
+  <meta name="description" content="Ford C-MAX 1.0 EcoBoost 2017: úspěšné naučení nových snímačů tlaku pneumatik přes palubní desku. FORScan 2.3.60 nenabízel servisní funkci TPMS.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://autoelektrika-janovsky.cz/cases/ford-cmax-2017-tpms-nove-snimace-palubni-deska.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .case{max-width:920px;margin:0 auto;padding:48px 20px}
+    .summary{padding:18px;border-radius:14px;background:rgba(78,169,255,.08);border:1px solid rgba(78,169,255,.2)}
+    .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0}
+    .fact{padding:14px;border:1px solid rgba(127,127,127,.26);border-radius:12px}
+    .status{display:inline-block;padding:5px 10px;border-radius:999px;background:#e9f8ee;color:#17562a;font-weight:700}
+    .case ol li{margin-bottom:10px}
+    .case p,.case li{line-height:1.65}
+    .note{padding:14px 18px;border-left:4px solid #4ea9ff;background:rgba(78,169,255,.06)}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Ford C-MAX 2017 – naučení nových snímačů TPMS přes palubní desku","description":"Případ z dílny: po montáži nových snímačů tlaku pneumatik šlo provést inicializaci přes palubní displej bez servisní funkce TPMS ve FORScanu.","author":{"@type":"Organization","name":"Autoelektrika Janovský"},"publisher":{"@type":"Organization","name":"Autoelektrika Janovský"},"mainEntityOfPage":"https://autoelektrika-janovsky.cz/cases/ford-cmax-2017-tpms-nove-snimace-palubni-deska.html","datePublished":"2026-10-21"}</script>
+</head>
+<body>
+<main class="case">
+  <p><a href="./">← Případy z dílny</a></p>
+  <span class="status">VYŘEŠENO</span>
+  <h1>Ford C-MAX 2017 – načtení nových snímačů tlaku pneumatik (TPMS)</h1>
+  <div class="facts">
+    <div class="fact"><strong>Vozidlo</strong><br>Ford C-MAX, rok 2017</div>
+    <div class="fact"><strong>Motor</strong><br>1.0 EcoBoost benzín</div>
+    <div class="fact"><strong>Systém</strong><br>TPMS – snímače tlaku v kolech</div>
+    <div class="fact"><strong>Diagnostika</strong><br>FORScan 2.3.60, vLinker FS</div>
+  </div>
+  <div class="summary"><strong>Výsledek:</strong> Nové snímače tlaku pneumatik se podařilo naučit přímo přes palubní desku vozidla. Ve FORScanu nebyla pro tento vůz dostupná samostatná servisní procedura TPMS.</div>
+  <h2>Zadání</h2>
+  <p>Po montáži nových snímačů tlaku pneumatik bylo potřeba jejich načtení do vozu. Mechanik nejprve připojil FORScan a hledal servisní funkci pro učení snímačů.</p>
+  <h2>Diagnostika</h2>
+  <ul>
+    <li>FORScan 2.3.60 rozpoznal Ford Focus C-MAX 1.0 EcoBoost, rok 2017, a načetl řídicí jednotky včetně BCMii.</li>
+    <li>V nabídce <strong>Servisní procedury</strong> nebyla dostupná funkce <strong>TPMS Sensor Training</strong> ani obdobně pojmenovaná procedura.</li>
+    <li>Položka <strong>TRM – Module Reboot</strong> je restart jednotky tažného zařízení, nikoliv učení snímačů pneumatik.</li>
+  </ul>
+  <h2>Úspěšný postup přes palubní desku</h2>
+  <ol>
+    <li>Po montáži snímačů zkontrolovat a nastavit předepsaný tlak pneumatik.</li>
+    <li>Zapnout zapalování a na palubním displeji otevřít <strong>nastavení vozidla / sledování tlaku pneumatik</strong>.</li>
+    <li>Vybrat volbu <strong>resetu nebo inicializace monitorování tlaku pneumatik</strong> a potvrdit ji podle pokynů přístrojového štítu (u této nabídky podržením tlačítka OK).</li>
+    <li>Po potvrzení nechat systém snímače načíst a ověřit správnou funkci. Konkrétní položky menu se mohou lišit podle verze přístrojového štítu.</li>
+  </ol>
+  <h2>Ověření výsledku</h2>
+  <p>Mechanik potvrdil, že <strong>načtení nových snímačů přes palubní desku fungovalo</strong>. Případ byl uzavřen jako úspěšně vyřešený bez servisní procedury FORScan.</p>
+  <div class="note"><strong>Poznatek z praxe:</strong> Pokud FORScan nenabízí funkci TPMS, nemusí to znamenat problém. U tohoto C-MAXu pomohla inicializace na palubním displeji. U univerzálních programovatelných snímačů je nejprve nutné ověřit jejich kompatibilitu a případné předchozí naprogramování TPMS přístrojem. Samotný reset palubní desky nenahrazuje programování nekompatibilního snímače.</div>
+  <h2>Závěrečná kontrola</h2>
+  <p>Po zásahu je vhodné vypnout a znovu zapnout zapalování, ověřit stav kontrolky TPMS a případně vymazat související uložené DTC. Pokud to systém vyžaduje, dokončit adaptaci při zkušební jízdě. Tyto doplňkové úkony nejsou v tomto záznamu samostatně potvrzeny.</p>
+  <p><strong>Autoelektrika Janovský – skutečný úspěšně vyřešený případ.</strong></p>
+</main>
+</body>
+</html>
