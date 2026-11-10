@@ -49,11 +49,15 @@
         "spečené kabely",
         "nad výfukem",
         "tepelně poškozená izolace",
-        "husí krk"
+        "husí krk",
+        "tepelná izolace lambda sondy",
+        "ochranný návlek kabeláže",
+        "regenerace DPF",
+        "sálavé teplo výfuku"
       ],
-      "cause": "Tepelně poškozená izolace a vzájemně spečené vodiče ve svazku nad výfukem. Po jejich oddělení zmizely chyby zkratu napájecích obvodů parkovacích snímačů.",
-      "repair": "Příčina lokalizována a vodiče odděleny; trvalá oprava úseku svazku a závěrečný funkční test všech snímačů dosud nepotvrzeny.",
-      "status": "ROZPRACOVÁNO",
+      "cause": "Zkrat vznikl v tepelně poškozeném kabelovém svazku nad výfukem. Vodiče byly vzájemně spečené, poškozený byl i ochranný husí krk. Kabeláž byla podle kontroly správně uchycená a v místě nebyl tepelný plech. Vliv sálavého tepla při regeneraci DPF je pravděpodobná hypotéza, nebyl však měřením prokázán.",
+      "repair": "Oprava spečené kabeláže nad výfukem, doplnění tepelně ochranného návleku používaného u kabeláže lambda sond. Po opravě přední i zadní parkovací asistence funguje správně; závada odstraněna.",
+      "status": "VYŘEŠENO",
       "url": "/cases/ford-mondeo-mk4-2007-parkovaci-senzory-zkrat-kabelaze.html"
     },
     {
