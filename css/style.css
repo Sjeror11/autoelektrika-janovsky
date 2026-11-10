@@ -137,6 +137,17 @@ ul, ol {
     box-shadow: 0 16px 40px rgba(78, 169, 255, 0.3);
 }
 
+.button--call {
+    flex-direction: column;
+    gap: 0.1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.button--call .button__phone {
+    white-space: nowrap;
+}
+
 .button--primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 24px 50px rgba(78, 169, 255, 0.35);
