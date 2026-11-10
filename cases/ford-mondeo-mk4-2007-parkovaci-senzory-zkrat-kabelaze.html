@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ford Mondeo MK4 (2007) – zkrat parkovacích snímačů způsobil spečený svazek nad výfukem | Autoelektrika Janovský</title>
+<meta name="description" content="Ford Mondeo MK4 kombi 2.0 TDCi: chyby B1B57:11 a B1B58:11, přední i zadní parkovací senzory mimo provoz. Skutečná příčina: tepelně poškozené vodiče nad výfukem.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://autoelektrika-janovsky.cz/cases/ford-mondeo-mk4-2007-parkovaci-senzory-zkrat-kabelaze.html">
+<link rel="stylesheet" href="../css/style.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ford Mondeo MK4 (2007) – zkrat parkovacích snímačů způsobil spečený svazek nad výfukem">
+<meta property="og:description" content="Osm parkovacích snímačů? Ani jeden vadný. Příčinou byly spečené vodiče nad výfukem. Diagnostický případ s FORScanem.">
+<meta property="og:url" content="https://autoelektrika-janovsky.cz/cases/ford-mondeo-mk4-2007-parkovaci-senzory-zkrat-kabelaze.html">
+<style>
+.case{max-width:940px;margin:0 auto;padding:clamp(28px,5vw,54px) 20px 76px;line-height:1.75}
+.case h1{font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.23;margin:.65rem 0 1.1rem}
+.case h2{font-size:clamp(1.27rem,2.6vw,1.65rem);margin:2rem 0 .7rem}
+.case p,.case li{max-width:82ch}
+.case li{margin:.35rem 0}
+.case a{color:var(--primary,#75bcff)}
+.case__eyebrow{font-weight:700;letter-spacing:.07em;text-transform:uppercase;font-size:.8rem;color:var(--primary,#75bcff)}
+.case__facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:22px 0}
+.case__fact,.case__panel{border:1px solid var(--card-border,rgba(142,157,176,.22));border-radius:12px;padding:15px;background:rgba(127,143,160,.07)}
+.case__fact strong{display:block;margin-bottom:3px}
+.case__status{display:inline-block;padding:5px 11px;border-radius:50px;background:rgba(255,178,80,.16);border:1px solid rgba(255,178,80,.4);font-size:.83rem;font-weight:700}
+.case__codes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.case__code{padding:18px;border:1px solid rgba(231,115,115,.4);background:rgba(231,115,115,.07);border-radius:12px}
+.case__code strong{font-size:1.3rem;display:block}
+.case__code span{display:block;font-size:.92rem}
+.case__diagram{margin:22px 0;padding:14px;background:rgba(127,143,160,.07);border-radius:12px;border:1px solid var(--card-border,rgba(142,157,176,.22))}
+.case__diagram svg{width:100%;height:auto;display:block}
+.case__diagram figcaption{font-size:.86rem;opacity:.82;margin-top:5px}
+.case__steps{padding-left:1.4rem}
+.case__result{border-left:4px solid #48b583;padding:14px 18px;background:rgba(72,181,131,.08);border-radius:0 12px 12px 0}
+.case__note{border-left:4px solid #e7ad51;padding:12px 16px;background:rgba(231,173,81,.07);border-radius:0 10px 10px 0}
+@media(max-width:600px){.case__codes{grid-template-columns:1fr}.case__facts{grid-template-columns:1fr 1fr}.case__fact{font-size:.92rem}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Ford Mondeo MK4 (2007) – zkrat parkovacích snímačů způsobil spečený svazek nad výfukem","description":"Diagnostika dvou zkratů napájení parkovacích snímačů na Fordu Mondeo MK4. Odpojení snímačů a nález spečené kabeláže nad výfukem.","datePublished":"2026-11-10","author":{"@type":"Organization","name":"Autoelektrika Janovský"},"publisher":{"@type":"Organization","name":"Autoelektrika Janovský"},"mainEntityOfPage":"https://autoelektrika-janovsky.cz/cases/ford-mondeo-mk4-2007-parkovaci-senzory-zkrat-kabelaze.html"}</script>
+</head>
+<body>
+<main class="case">
+<p><a href="./">← Všechny případy z dílny</a></p>
+<p class="case__eyebrow">Ford · elektroinstalace · FORScan · 10. listopadu 2026</p>
+<span class="case__status">ROZPRACOVÁNO – příčina potvrzena</span>
+<h1>Ford Mondeo MK4: nefunkční parkovací senzory a nečekaný zkrat nad výfukem</h1>
+<p><strong>Na diagnostice se objevily dvě závady napájení parkovacích snímačů.</strong> Přední i zadní asistence byla mimo provoz. Přitom se nakonec ukázalo, že problém nebyl v jednotlivých snímačích, ale ve spečené kabeláži pod vozem.</p>
+<div class="case__facts">
+<div class="case__fact"><strong>Vozidlo</strong>Ford Mondeo MK4, kombi</div>
+<div class="case__fact"><strong>Rok / motor</strong>2007 · 2.0 TDCi</div>
+<div class="case__fact"><strong>Řídicí jednotka</strong>PAM – parkovací asistent</div>
+<div class="case__fact"><strong>Diagnostika</strong>FORScan 2.3.60</div>
+</div>
+<h2>Původní chybové kódy</h2>
+<div class="case__codes">
+<div class="case__code"><strong>B1B57:11</strong><span>Zkrat napájecího obvodu předních parkovacích snímačů na kostru.</span></div>
+<div class="case__code"><strong>B1B58:11</strong><span>Zkrat napájecího obvodu zadních parkovacích snímačů na kostru.</span></div>
+</div>
+<p>Současná závada předního a zadního napájení svádí k podezření na některý snímač nebo samotnou řídicí jednotku. Nejdřív však bylo nutné zjistit, zda napětí nestahuje konkrétní spotřebič, nebo kabelový svazek.</p>
+<h2>Průběh diagnostiky</h2>
+<ol class="case__steps">
+<li><strong>Načtení závad ve FORScanu.</strong> PAM hlásila zkrat napájení předních i zadních snímačů.</li>
+<li><strong>Odpojení předního a zadního okruhu snímačů.</strong> Diagnostika začala jednotlivě evidovat odpojené snímače (B1B36 až B1B50). Závady napájení byly stále zaznamenané, takže samotná výměna senzorů by byla předčasná.</li>
+<li><strong>Kontrola svazku pod autem.</strong> Nad výfukovým potrubím bylo nalezeno místo, kde se vodiče tepelně poškodily a dotýkaly se mezi sebou. Roztavený byl i černý ochranný husí krk.</li>
+<li><strong>Oddělení poškozených vodičů.</strong> Po jejich rozdělení už se zkrat napájecích obvodů nehlásil. To potvrdilo zdroj problému v kabeláži.</li>
+</ol>
+<figure class="case__diagram" aria-label="Zjednodušené schéma diagnózy">
+<svg viewBox="0 0 720 214" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svgTitle svgDesc">
+<title id="svgTitle">Zkrat napájení parkovacích snímačů v kabeláži</title>
+<desc id="svgDesc">Jednotka PAM, větve pro přední a zadní snímače, místo tepelného poškození u výfuku.</desc>
+<rect x="10" y="64" width="122" height="94" rx="13" fill="#1d344b" stroke="#68a6d9" stroke-width="2"/>
+<text x="71" y="103" fill="#fff" text-anchor="middle" font-size="24" font-weight="bold">PAM</text>
+<text x="71" y="126" fill="#cfe1ef" text-anchor="middle" font-size="13">jednotka</text>
+<path d="M132 90H385" stroke="#a88bff" stroke-width="5" fill="none"/>
+<path d="M132 139H385" stroke="#6aa5e8" stroke-width="5" fill="none"/>
+<rect x="385" y="68" width="125" height="49" rx="8" fill="#534b74" stroke="#a88bff"/>
+<rect x="385" y="129" width="125" height="49" rx="8" fill="#28557d" stroke="#6aa5e8"/>
+<text x="447" y="88" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">Přední</text>
+<text x="447" y="105" font-size="13" fill="#fff" text-anchor="middle">4 snímače</text>
+<text x="447" y="149" font-size="16" fill="#fff" font-weight="bold" text-anchor="middle">Zadní</text>
+<text x="447" y="166" font-size="13" fill="#fff" text-anchor="middle">4 snímače</text>
+<path d="M225 89L241 118L225 139" stroke="#ff986c" stroke-width="7" fill="none"/>
+<path d="M255 89L239 118L255 139" stroke="#ff986c" stroke-width="7" fill="none"/>
+<circle cx="240" cy="115" r="34" fill="none" stroke="#e86f5d" stroke-dasharray="5 5" stroke-width="2"/>
+<text x="240" y="29" fill="currentColor" text-anchor="middle" font-size="15" font-weight="bold">Tepelné poškození</text>
+<path d="M240 38V76" stroke="#e86f5d" stroke-width="2"/>
+<text x="240" y="193" fill="currentColor" text-anchor="middle" font-size="14">Místo nad výfukem</text>
+<path d="M510 93H555M510 154H555" stroke="#8b97a6" stroke-width="3" stroke-dasharray="5 5"/>
+<text x="628" y="103" fill="currentColor" text-anchor="middle" font-size="14">napájecí větve</text>
+<text x="628" y="123" fill="currentColor" text-anchor="middle" font-size="14">snímačů</text>
+</svg>
+<figcaption>Princip diagnostiky – ilustrační schéma, nikoli originální pinout konektorů.</figcaption>
+</figure>
+<h2>Skutečná příčina</h2>
+<p><strong>Tepelně poškozený kabelový svazek vedený nad výfukem.</strong> Jednotlivé vodiče měly rozteklou izolaci, byly vzájemně spečené a vytvářely nežádoucí elektrické propojení. Poškozena byla i plastová ochranná trubice.</p>
+<p>Pozoruhodné je, že svazek byl správně uchycený. Přesto se v daném místě přehřál. Při následné opravě je proto důležité prověřit také trasu, vzdálenost od výfuku a případnou tepelnou ochranu.</p>
+<div class="case__result"><strong>Potvrzený výsledek diagnostiky:</strong> po oddělení spečených vodičů přestala jednotka PAM hlásit zkrat napájení předních a zadních parkovacích snímačů. Příčina zkratu byla lokalizována.</div>
+<h2>Co zbývá dokončit</h2>
+<p>Trvalá oprava vyžaduje výměnu tepelně poškozených úseků vodičů, odolné zaizolování spojů, vhodnou ochranu a uložení svazku. Poté je potřeba zapojit snímače, vymazat DTC, vypnout a zapnout zapalování a ověřit funkci předního i zadního parkovacího asistenta.</p>
+<p class="case__note"><strong>Stav případu:</strong> příčina poruchy je potvrzená, ale konečný test po trvalé opravě kabeláže zatím nebyl zdokumentován. Proto případ není označen jako „VYŘEŠENO“.</p>
+<h2>Poučení pro diagnostiku</h2>
+<p><strong>Jestliže obě větve napájení snímačů vykazují zkrat, neznamená to automaticky vadné senzory ani řídicí jednotku.</strong> Odpojování větví a následná kontrola kabeláže může odhalit jedinou společnou příčinu. V tomto případě šlo o tepelně poškozené vodiče nad výfukem.</p>
+<p><a href="./">← Zpět do databáze skutečných případů</a></p>
+</main>
+</body>
+</html>

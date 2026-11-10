@@ -1,6 +1,6 @@
 {
   "project": "Autoelektrika Janovský – databáze oprav",
-  "updated": "2026-10-21",
+  "updated": "2026-11-10",
   "statuses": [
     "VYŘEŠENO",
     "ROZPRACOVÁNO",
@@ -8,6 +8,54 @@
     "UKONČENO – EKONOMICKY NEOPRAVENO"
   ],
   "cases": [
+    {
+      "id": "ford-mondeo-mk4-2007-parkovaci-senzory-zkrat-kabelaze",
+      "make": "Ford",
+      "model": "Mondeo MK4 kombi",
+      "year": 2007,
+      "engine": "2.0 TDCi",
+      "systems": [
+        "parkovací asistent PAM",
+        "přední a zadní parkovací snímače",
+        "elektroinstalace",
+        "kabeláž nad výfukem"
+      ],
+      "symptoms": [
+        "nefunkční přední i zadní parkovací asistence",
+        "B1B57:11 zkrat napájení předních snímačů na kostru",
+        "B1B58:11 zkrat napájení zadních snímačů na kostru",
+        "závady napájení i po odpojení snímačů"
+      ],
+      "keywords": [
+        "Ford Mondeo",
+        "Mondeo MK4",
+        "Mondeo IV",
+        "Mondeo 2007",
+        "kombi",
+        "2.0 TDCi",
+        "FORScan",
+        "PAM",
+        "parkovací senzory",
+        "PDC",
+        "parkovací asistent",
+        "B1B57",
+        "B1B57:11",
+        "B1B58",
+        "B1B58:11",
+        "B1B36",
+        "B1B50",
+        "zkrat na kostru",
+        "svazek",
+        "spečené kabely",
+        "nad výfukem",
+        "tepelně poškozená izolace",
+        "husí krk"
+      ],
+      "cause": "Tepelně poškozená izolace a vzájemně spečené vodiče ve svazku nad výfukem. Po jejich oddělení zmizely chyby zkratu napájecích obvodů parkovacích snímačů.",
+      "repair": "Příčina lokalizována a vodiče odděleny; trvalá oprava úseku svazku a závěrečný funkční test všech snímačů dosud nepotvrzeny.",
+      "status": "ROZPRACOVÁNO",
+      "url": "/cases/ford-mondeo-mk4-2007-parkovaci-senzory-zkrat-kabelaze.html"
+    },
     {
       "id": "ford-cmax-2017-tpms-nove-snimace-palubni-deska",
       "make": "Ford",
